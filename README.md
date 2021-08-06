@@ -18,6 +18,14 @@ composer require spm/zipper
 
 ```php
 
+# Providers to add
+
+Spm\Zipper\ZipperServiceProvider:class
+
+#Facade to add
+
+'Zipper' => Spm\Zipper\Facades\Zipper::class
+
 # Set the path and name of the new zip file
 
 $zip_file_name = public_path() . '\exports\file_name.zip';
