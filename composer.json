@@ -1,0 +1,28 @@
+{
+    "name": "spm/zipper",
+    "description": "Zip to all files in a folder and its subfolders recursively",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Santiago",
+            "email": "santiagopereyra2702@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Spm\\Zipper\\" : "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Spm\\Zipper\\ZipperServiceProvider"
+            ],
+            "aliases": {
+                "Zipper" : "Spm\\Zipper\\Facades\\Zipper"
+            }
+        }
+    }
+}
