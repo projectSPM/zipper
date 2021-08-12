@@ -47,7 +47,7 @@ class Zipper extends ZipArchive{
         $comprimido = $this->open($this->path_to_zipFile);
 
         if($comprimido == true){
-            $this->extractTo($this->path_to_zipFile);
+            $this->extractTo($this->path_to_unZip);
             $this->close();
         }else{
             return false;
