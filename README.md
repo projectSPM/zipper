@@ -50,11 +50,13 @@ Zipper::makeZip();
 # Set path to the zip file to unzip
 
 $path_to_zipFile = $request->file('excel-file')->path();
+
 Zipper::setPathToZipFile($path_to_zipFile)
 
 # Set path to the unzipped file result
 
 $path_to_unZip = public_path('storage\import');
+
 Zipper::setPathToUnzip($path_to_unZip)
 
 # Make de unzip file
