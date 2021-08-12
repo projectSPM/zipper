@@ -2,9 +2,10 @@
 
 ZPM Zipper is a laravel package.
  
-Its main function is to recursively zip files from a folder and its subfolders.
+Its main function are:
+ 1 -  recursively zip files from a folder and its subfolders. The structure of the zip will coincide with that of the route sent to the package.
 
-The structure of the zip will coincide with that of the route sent to the package.
+ 2 - Unzip a zip file to a specific path
 
 ## Installation
 
@@ -46,6 +47,19 @@ Zipper::setFoldersToZip($folders_to_zip)
 
 Zipper::makeZip();
 
+# Set path to the zip file to unzip
+
+$path_to_zipFile = $request->file('excel-file')->path();
+Zipper::setPathToZipFile($path_to_zipFile)
+
+# Set path to the unzipped file result
+
+$path_to_unZip = public_path('storage\import');
+Zipper::setPathToUnzip($path_to_unZip)
+
+# Make de unzip file
+
+Zipper::unZipFile()
 ```
 
 ## Contributing
